@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container" id="formContainer">
+    <form onsubmit="showMessage(event)">
+      <input type="text" placeholder="Name" required>
+      <input type="text" placeholder="Specialization" required>
+      <textarea placeholder="Why do you want to join?" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="message" id="messageBox">
+    <p>Thank you! Your information has been sent successfully.</p>
+  </div>
+
+  <script>
+    function showMessage(e) {
+      e.preventDefault();
+      document.getElementById("formContainer").style.display = "none";
+      document.getElementById("messageBox").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

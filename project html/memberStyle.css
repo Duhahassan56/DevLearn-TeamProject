@@ -1,0 +1,408 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', Helvetica, sans-serif;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(136deg, rgba(14,14,14,1) 0%, rgba(65,65,65,1) 100%);
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 104px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+}
+
+.logo-text {
+  font-family: 'Work Sans', Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(19, 34, 56, 1);
+  white-space: nowrap;
+  line-height: 40px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 400;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Header Buttons */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.btn {
+  height: 31px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-signup {
+  background-color: black;
+  padding: 0 36.5px;
+}
+
+.btn-signup:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.btn-login {
+  background-color: #c6c6c6;
+  padding: 0 40.5px;
+}
+
+.btn-login:hover {
+  background-color: rgba(198, 198, 198, 0.9);
+}
+
+.btn-text {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 14px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 158px;
+  padding-bottom: 131px;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 766px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1015px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.hero-title {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 64px;
+  text-align: center;
+}
+
+.hero-description {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 300;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  line-height: 48px;
+}
+
+.btn-join {
+  position: relative;
+  z-index: 10;
+  margin-top: 70px;
+  height: 50px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 0 101px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-join:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-join-text {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 700;
+  color: black;
+  font-size: 24px;
+}
+
+/* Team Members Section */
+.team-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 16px;
+}
+
+.team-title {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 64px;
+  margin-bottom: 100px;
+}
+
+/* Member Grid - First Row */
+.team-grid-first {
+  width: 100%;
+  max-width: 1234px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 28px;
+  justify-items: center;
+}
+
+/* Member Grid - Second Row */
+.team-grid-second {
+  width: 100%;
+  max-width: 1234px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  justify-items: center;
+}
+
+.team-grid-second .member-card:first-child {
+  grid-column: 2 / 3;
+}
+
+.team-grid-second .member-card:last-child {
+  grid-column: 3 / 4;
+}
+
+/* Member Card */
+.member-card {
+  width: 392px;
+}
+
+.member-card-inner {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.member-image {
+  width: 100%;
+  height: 301px;
+  object-fit: cover;
+  border-radius: 13px 13px 0 0;
+  filter: brightness(0.7);
+  position: relative;
+}
+
+.member-content {
+  width: 100%;
+  min-height: 280px;
+  background-color: white;
+  border-radius: 0 0 13px 13px;
+  padding: 14px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-name {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 400;
+  color: black;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.member-description {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 200;
+  color: black;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.footer-text {
+  font-family: 'Cairo', Helvetica;
+  font-weight: 400;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* TABLET (768px and up) */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 70px;
+  }
+
+  .logo-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .hero-section {
+    padding: 100px 30px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 22px;
+  }
+
+  .team-title {
+    font-size: 48px;
+  }
+
+  .team-grid-first,
+  .team-grid-second {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .member-name {
+    font-size: 30px;
+  }
+
+  .member-description {
+    font-size: 20px;
+  }
+}
+
+/* DESKTOP (1024px and up) */
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 80px;
+  }
+
+  .hero-section {
+    padding: 158px 40px 131px;
+  }
+
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .hero-description {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .team-title {
+    font-size: 64px;
+  }
+
+  .team-grid-first {
+    max-width: 1234px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-grid-second {
+    max-width: 1234px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team-grid-second .member-card:first-child {
+    grid-column: 2 / 3;
+  }
+
+  .team-grid-second .member-card:last-child {
+    grid-column: 3 / 4;
+  }
+
+  .member-name {
+    font-size: 36px;
+  }
+
+  .member-description {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+/* LARGE DESKTOP (1440px and up) */
+@media (min-width: 1440px) {
+  .header {
+    padding: 0 104px;
+  }
+}
