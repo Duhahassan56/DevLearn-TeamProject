@@ -100,7 +100,7 @@ body {
 }
 
 .join-btn:hover {
-  background-color: #1f5a4b;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* -------------------- Courses Section -------------------- */
@@ -162,4 +162,5 @@ footer {
   color: #888;
   font-size: 14px;
 }
+
 
