@@ -87,13 +87,20 @@ body {
 }
 
 .join-btn {
+  display: inline-block;
   background-color: #fff;
   color: #000;
   padding: 12px 28px;
   border-radius: 30px;
   font-weight: bold;
   border: none;
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+  background-color: #1f5a4b;
 }
 
 /* -------------------- Courses Section -------------------- */
@@ -155,3 +162,4 @@ footer {
   color: #888;
   font-size: 14px;
 }
+
